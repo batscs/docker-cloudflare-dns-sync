@@ -13,7 +13,7 @@ This is a bash script to continously update and refresh a cloudflare dns record 
 <a name="docker-installation"/>
 
 ### Installation (With Docker)
-1. Deploy docker container
+Deploy docker container
 To use the installation script, simply run this command in your terminal of choice with root priveleges. The script will automatically build the image and deploy the container.
 ```
 # If you dont have root priveleges run this first, otherwise you can skip this
@@ -42,7 +42,7 @@ if you need help configuring the cronjob for the script [click here](#configurat
 <a name="installation"/>
 
 ### Installation (Without Docker)
-1. Download the cloudflare-dns-sync.sh file to your desired  
+Download the cloudflare-dns-sync.sh file to your desired  
   
 Enter this into your terminal of choice to automatically deploy this script. Requires root privelege
 Otherwise manually the cloudflare-dns-sync.sh file of this repository in a directory of your choice
