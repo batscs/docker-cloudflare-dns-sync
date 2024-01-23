@@ -3,8 +3,6 @@ FROM ubuntu:22.04
 
 MAINTAINER dev@bats.li
 
-WORKDIR ~
-
 # Installing requirements
 RUN apt-get update
 RUN apt-get install -y nano
