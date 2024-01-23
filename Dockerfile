@@ -9,7 +9,7 @@ RUN apt-get install -y nano
 RUN apt-get install -y curl
 RUN apt-get install -y cron
 RUN apt-get install -y jq
-RUN apt-get intall -y host
+RUN apt-get install -y host
 
 # Create directory for script
 RUN mkdir -p ~/.cloudflare; 
