@@ -9,5 +9,8 @@ RUN apt-get install -y curl
 RUN apt-get install -y cron
 RUN apt-get install -y nano
 
-# Deploying installer for cloudflare-dns-sync on this system
-RUN bash <(curl -s https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/deploy-shell.sh)
+# Create directory for script
+RUN mkdir -p ~/.cloudflare; 
+
+# Downloading file into directory
+RUN curl https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/cloudflare-dns-sync.sh > ~/.cloudflare/cloudflare-dns-sync.sh
