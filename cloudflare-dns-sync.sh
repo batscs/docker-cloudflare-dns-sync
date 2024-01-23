@@ -13,9 +13,6 @@ cloudflare_auth_key=1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZX
 # Zone ID can be found in the Overview Tab
 cloudflare_zoneid=1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZX
 
-# dnsrecord is the A record which will be updated
-cloudflare_dnsrecord=sub.domain.com
-
 # Enable or Disable Cloudflare Proxified IP for the DNS Record
 # In most cases you want this on false, because Cloudflare doesnt proxy all ports
 proxy=false
