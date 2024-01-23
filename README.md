@@ -1,8 +1,8 @@
 #### Table of Contents  
 [Introduction](#introduction)  
-[Installation (Without Docker)](#installation) 
-[Installation (With Docker)](#docker-installation)
-[Script Usage](#script)
+[Installation (Without Docker)](#installation)  
+[Installation (With Docker)](#docker-installation)  
+[Script Usage](#script)  
 
 <a name="introduction"/>
 
