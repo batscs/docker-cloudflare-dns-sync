@@ -63,8 +63,8 @@ if you need help configuring the cronjob for the script [click here](#configurat
 
 Configure your crontab in this format
 ```
-*/10 * * * * ~/.clouflare/cloudflare-dns-sync.sh --domain sub1.domain.com
-*/10 * * * * ~/.clouflare/cloudflare-dns-sync.sh --domain sub2.domain.com
+*/10 * * * * ~/.cloudflare/cloudflare-dns-sync.sh --domain sub1.domain.com
+*/10 * * * * ~/.cloudflare/cloudflare-dns-sync.sh --domain sub2.domain.com
 ```
 This will update the cloudflare dns every 10 minutes to the ip of the host machine. 
 
