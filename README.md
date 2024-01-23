@@ -9,6 +9,7 @@
 
 ## Introduction
 This is a bash script to continously update and refresh a Cloudflare DNS-Record with the public / external IP Address of the host system running the script (or a predetermined IP Address).
+Runs inside a Ubuntu 20.04 Docker Container.
 
 #### Features:
 - Automatic deployment to a docker container
