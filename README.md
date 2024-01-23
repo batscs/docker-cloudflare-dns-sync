@@ -100,7 +100,6 @@ For more about cronjobs [read this](https://ostechnix.com/a-beginners-guide-to-c
 <a name="script"/>
 
 ## Script Usage
-Update the dns record of the subdomain to the ip address of the host machine running the script.
 ```
 # Update DNS-Record of Subdomain to IP of host machine running the 
 script --domain sub.domain.com
