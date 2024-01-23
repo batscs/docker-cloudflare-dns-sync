@@ -6,3 +6,5 @@ docker build --no-cache -t batscs/cloudflare-dns-sync:latest https://raw.githubu
 
 echo "Docker: Creating Container cf-sync with Image batscs/cloudflare-dns-sync"
 docker run -dit --name cf-sync --restart unless-stopped batscs/cloudflare-dns-sync
+
+docker exec -it cf-sync bash
