@@ -114,3 +114,8 @@ script --domain sub.domain.com --target 127.0.0.1
 script --domain sub.domain.com --target 127.0.0.1 --proxy
 ``` 
 
+## To-Do
+If docker container restarts, you need to manually start cron again. Would be really convenient if this could be automated. This would probably also fix cron not being started on first boot, even though its defined in the Dockerfile.
+```
+cron
+```
