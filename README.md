@@ -47,7 +47,7 @@ Otherwise manually the cloudflare-dns-sync.sh file of this repository in a direc
 sudo -i
 
 # Command to run the installation script
-bash <(curl -s https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/deploy-shell.sh)
+bash <(curl -s https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/deploy.sh)
 ```
 
 With crontab you can automate the proccess of running this script
