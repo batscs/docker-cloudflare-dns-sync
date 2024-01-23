@@ -1,7 +1,7 @@
 ### Table of Contents  
 [Introduction](#introduction)  
 [Installation (With Docker)](#docker-installation)  
-[Installation (Without Docker)](#installation) 
+[Installation (Without Docker)](#installation)  
 [Configuration (Crontab)](#configuration)  
 [Script Usage](#script)  
 
