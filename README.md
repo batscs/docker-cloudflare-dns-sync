@@ -24,13 +24,17 @@ bash <(curl -s https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main
 ```
 The docker container (named: cf-sync) has been deployed and should be running. If all went successfully you can now access it and configure your crontab.
 ```
-# Enter bash shell for the docker container
+# Enter bash shell for the docker container, if not already entered from deploy script
 docker exec -it cf-sync bash
+
+# Configure cloudflare credentials at the top of the script
+nano ~/.cloudflare/cloudflare-dns-sync.sh
 
 # Access crontab inside of docker container
 crontab -e
 
 # Exit docker container after modifying & saving crontab
+cron
 exit
 ```
 if you need help configuring the cronjob for the script [click here](#configuration)  
