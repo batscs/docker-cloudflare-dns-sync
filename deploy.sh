@@ -7,3 +7,5 @@ mkdir -p ~/.cloudflare;
 
 # Downloading file
 curl https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/cloudflare-dns-sync.sh > ~/.cloudflare/cloudflare-dns-sync.sh
+
+chmod +x ~/.cloudflare/cloudflare-dns-sync.sh
