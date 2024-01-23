@@ -29,6 +29,9 @@ docker exec -it cf-sync bash
 
 # Access crontab inside of docker container
 crontab -e
+
+# Exit docker container after modifying & saving crontab
+exit
 ```
 if you need help configuring the cronjob for the script [click here](#configuration)  
 
