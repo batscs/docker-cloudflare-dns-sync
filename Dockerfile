@@ -7,10 +7,10 @@ WORKDIR ~
 
 # Installing requirements
 RUN apt-get update
-RUN apt-get install -y jq
+RUN apt-get install -y nano
 RUN apt-get install -y curl
 RUN apt-get install -y cron
-RUN apt-get install -y nano
+RUN apt-get install -y jq
 
 # Create directory for script
 RUN mkdir -p ~/.cloudflare; 
