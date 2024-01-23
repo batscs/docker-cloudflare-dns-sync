@@ -1,4 +1,4 @@
-#### Table of Contents  
+### Table of Contents  
 [Introduction](#introduction)  
 [Installation (Without Docker)](#installation)  
 [Installation (With Docker)](#docker-installation)  
@@ -6,12 +6,12 @@
 
 <a name="introduction"/>
 
-#### Introduction
+### Introduction
 This is a bash script to continously update and refresh a cloudflare dns record with the public / external IP Address of the host system running the script (or a predetermined IP Address).
 
 <a name="installation"/>
 
-#### Installation (Without Docker)
+### Installation (Without Docker)
 1. Download the cloudflare-dns-sync.sh file to your desired  
   
 Enter this into your terminal of choice to automatically deploy this script. Otherwise manually the cloudflare-dns-sync.sh file of this repository in a directory of your choice
@@ -36,12 +36,12 @@ This will update the cloudflare dns every 10 minutes to the ip of the host machi
 
 <a name="docker-installation"/>
 
-#### Installation (With Docker)
-Dockerfile is not made yet :()
+### Installation (With Docker)
+Dockerfile is not made yet :(
 
 <a name="script"/>
 
-#### Script Usage
+### Script Usage
 Update the dns record of the subdomain to the ip address of the host machine running the script.
 ```
 # Update DNS-Record of Subdomain to IP of host machine running the 
