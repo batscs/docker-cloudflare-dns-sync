@@ -20,7 +20,7 @@ To use the installation script, simply run this command in your terminal of choi
 sudo -i
 
 # Command to run the installation script for docker
-bash <(curl -s https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/deploy-docker.sh)
+bash <(curl -s https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/deploydocker.sh)
 ```
 The docker container (named: cf-sync) has been deployed and should be running. If all went successfully you can now access it and configure your crontab.
 ```
