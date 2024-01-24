@@ -25,6 +25,7 @@ If you need help or run into problems feel free to open an issue for this reposi
 #### Features:
 - Automatic deployment to a docker container
 - Automatic synchronization for Cloudflare DNS-Record with IP Address of Host Machine
+- Automatic docker container start with crontab running
 - (Optional) Support for Cloudflare DNS-Proxy (Not recommended in most cases)
 - (Optional) Support for Specifization of Target IP instead of Host Machine
 
@@ -62,12 +63,6 @@ Modify the crontab schedule to periodically update the DNS Record, if an IP Chan
 If you need help configuring the cronjob for the script [click here](#configuration) for examples.
 ```bash
 crontab -e
-```
-
-At last you need to start your Cron Service, which is responsible for the scheduled command execution in the previous step.
-No output from the command is expected, if it tells you an APPID is already reserved, it means Cron is already running.
-```bash
-cron
 ```
 
 <a name="installation"/>  
@@ -124,9 +119,3 @@ script --domain sub.domain.com --target 127.0.0.1
 # Use Target IP instead of IP of the host machine AND use Cloudflare Proxy
 script --domain sub.domain.com --target 127.0.0.1 --proxy
 ``` 
-
-## To-Do
-If docker container restarts, you need to manually start cron again. Would be really convenient if this could be automated. This would probably also fix cron not being started on first boot, even though its defined in the Dockerfile.
-```
-cron
-```
