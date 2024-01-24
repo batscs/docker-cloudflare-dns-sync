@@ -29,35 +29,35 @@ Deploy docker container
 To use the installation script, simply run this command in your terminal of choice with root priveleges. The script will automatically build the image and deploy the container.
 
 Root priveleges are required to run the installation script. If you can not execute the command from the next step run this:
-```
+```bash
 sudo -i
 ```
 
 This runs the installation script on the Host Machine to build the Docker Image from this Repository and deploy a Docker Container with it.
-```
+```bash
 bash <(curl -s https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/docker.sh)
 ```
 
 The docker container (named: cf-sync) has been deployed and should be running. If all went successfully you can now access it and configure your crontab.
 From the installation script you should already be connected to the container in your shell. However if this is not the case, you can enter the container like this:
-```
+```bash
 docker exec -it cf-sync bash
 ```
 
 From here you first need to setup your Cloudflare-DNS-Sync Script by entering your API Token and Specifics about the DNS.
-```
+```bash
 nano ~/.cloudflare/cloudflare-dns-sync.sh
 ```
 
 Modify the crontab schedule to periodically update the DNS Record, if an IP Change for the host machine occurs.
 If you need help configuring the cronjob for the script [click here](#configuration) for examples.
-```
+```bash
 crontab -e
 ```
 
 At last you need to start your Cron Service, which is responsible for the scheduled command execution in the previous step.
 No output from the command is expected, if it tells you an APPID is already reserved, it means Cron is already running.
-```
+```bash
 cron
 ```
 
@@ -72,17 +72,17 @@ Otherwise manually download the cloudflare-dns-sync.sh file of this repository i
 Only do this if you really know what and why you are doing this.
 
 Root priveleges are required to run the installations script. If you can not execute the command from the next step run this:
-```
+```bash
 sudo -i
 ```
 
 Run the installation script in your terminal with the following command.
-```
+```bash
 bash <(curl -s https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/deploy.sh)
 ```
 
 Now you need to configure the crontab schedule for the automatic execution of your scripts, you can edit the schedule with this command:
-```
+```bash
 crontab -e
 ```
 if you need help configuring the cronjob for the script [click here](#configuration) for examples.
@@ -102,7 +102,7 @@ For more about cronjobs [read this](https://ostechnix.com/a-beginners-guide-to-c
 <a name="script"/>
 
 ## Script Usage
-```
+```bash
 # Update DNS-Record of Subdomain to IP of host machine running the 
 script --domain sub.domain.com
 
