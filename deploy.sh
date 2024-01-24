@@ -3,9 +3,9 @@
 # No Cronjobs are set by default
 
 # Create directory for script
-mkdir -p ~/.cloudflare; 
+mkdir -p /opt/bin/cloudflare; 
 
 # Downloading file
-curl https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/cloudflare-dns-sync.sh > ~/.cloudflare/cloudflare-dns-sync.sh
+curl https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/cloudflare-dns-sync.sh > /opt/bin/cloudflare/cloudflare-dns-sync.sh
 
-chmod +x ~/.cloudflare/cloudflare-dns-sync.sh
+chmod +x /opt/bin/cloudflare/cloudflare-dns-sync.sh
