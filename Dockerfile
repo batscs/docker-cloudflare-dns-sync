@@ -12,11 +12,11 @@ RUN apt-get install -y jq
 RUN apt-get install -y host
 
 # Create directory for script
-RUN mkdir -p ~/.cloudflare; 
+RUN mkdir -p /opt/bin/cloudflare; 
 
 # Downloading file into directory
-RUN curl https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/cloudflare-dns-sync.sh > ~/.cloudflare/cloudflare-dns-sync.sh
+RUN curl https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/cloudflare-dns-sync.sh > /opt/bin/cloudflare/cloudflare-dns-sync.sh
 
-RUN chmod +x ~/.cloudflare/cloudflare-dns-sync.sh
+RUN chmod +x /opt/bin/cloudflare/cloudflare-dns-sync.sh
 
 CMD cron -f
