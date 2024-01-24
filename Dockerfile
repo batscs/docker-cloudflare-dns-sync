@@ -19,4 +19,4 @@ RUN curl https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/cloud
 
 RUN chmod +x ~/.cloudflare/cloudflare-dns-sync.sh
 
-RUN cron
+CMD cron -f
