@@ -1,4 +1,10 @@
-# bats' Cloudflare-DNS-Sync
+<table>
+  <tr>
+    <td> <img src="https://github.com/batscs/cloudflare-dns-sync/assets/31670615/58296fbd-9a48-4263-a491-308e49035aba" alt="image" width="130" height="auto"> </td>
+    <td><h1>bats' Cloudflare-DNS-Sync</h1></td>
+  </tr>
+</table>
+
 ### Table of Contents  
 [Introduction](#introduction)  
 [Installation (with Docker)](#docker-installation)  
