@@ -1,3 +1,4 @@
+# bats' Cloudflare-DNS-Sync
 ### Table of Contents  
 [Introduction](#introduction)  
 [Installation (with Docker)](#docker-installation)  
@@ -12,6 +13,8 @@ This is a bash script to continously update and refresh a Cloudflare DNS-Record 
 Runs inside a Ubuntu 20.04 Docker Container.
 
 This is intentend to be as lightweight as possible. All written in bash instead of python, and the docker container has just installed the minimum of neccessary software.
+
+If you need help or run into problems feel free to open an issue for this repository.
 
 #### Features:
 - Automatic deployment to a docker container
