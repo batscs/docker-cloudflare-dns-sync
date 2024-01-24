@@ -56,7 +56,7 @@ docker exec -it cf-sync bash
 
 From here you first need to setup your Cloudflare-DNS-Sync Script by entering your API Token and Specifics about the DNS.
 ```bash
-nano ~/.cloudflare/cloudflare-dns-sync.sh
+nano /opt/bin/cloudflare/cloudflare-dns-sync.sh
 ```
 
 Modify the crontab schedule to periodically update the DNS Record, if an IP Change for the host machine occurs.
@@ -97,8 +97,8 @@ if you need help configuring the cronjob for the script [click here](#configurat
 
 Configure your crontab in this format
 ```
-*/10 * * * * ~/.cloudflare/cloudflare-dns-sync.sh --domain sub1.domain.com
-*/10 * * * * ~/.cloudflare/cloudflare-dns-sync.sh --domain sub2.domain.com
+*/10 * * * * /opt/bin/cloudflare/cloudflare-dns-sync.sh --domain sub1.domain.com
+*/10 * * * * /opt/bin/cloudflare/cloudflare-dns-sync.sh --domain sub2.domain.com
 ```
 This will update the Cloudflare DNS-Record for sub1 and sub2 every 10 minutes to the ip of the host machine.
 For more about cronjobs [read this](https://ostechnix.com/a-beginners-guide-to-cron-jobs/).
