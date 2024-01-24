@@ -48,21 +48,14 @@ This runs the installation script on the Host Machine to build the Docker Image 
 bash <(curl -s https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/docker.sh)
 ```
 
-The docker container (named: cf-sync) has been deployed and should be running. If all went successfully you can now access it and configure your crontab.
-From the installation script you should already be connected to the container in your shell. However if this is not the case, you can enter the container like this:
+The docker container (named: cf-sync) has been deployed and should be running. If all went successfully you can now access it and configure your crontab. When using the install script the crontab editor should open by itself, otherwise you can edit the crontab schedule like this:
 ```bash
-docker exec -it cf-sync bash
+docker exec -it cf-sync crontab -e
 ```
 
-From here you first need to setup your Cloudflare-DNS-Sync Script by entering your API Token and Specifics about the DNS.
+At last you just need to configure the script to work with your Cloudflare API Gateway. Edit the variables here at the top. Only change the script if you really understand what you are doing.
 ```bash
-nano /opt/bin/cloudflare/cloudflare-dns-sync.sh
-```
-
-Modify the crontab schedule to periodically update the DNS Record, if an IP Change for the host machine occurs.
-If you need help configuring the cronjob for the script [click here](#configuration) for examples.
-```bash
-crontab -e
+docker exec -it cf-sync nano /opt/bin/cloudflare/cloudflare-dns-sync.sh
 ```
 
 <a name="installation"/>  
