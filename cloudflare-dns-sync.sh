@@ -4,6 +4,8 @@
 # Needs the DNS record pre-creating on Cloudflare
 # Modified after: https://gist.github.com/Tras2/cba88201b17d765ec065ccbedfb16d9a
 
+# ------------------- MODIFY YOUR USER DEFINED VARIABLES HERE --------------------------
+
 ## Cloudflare authentication details, keep these private!
 cloudflare_auth_email=your@email.com
 # Global Auth Key
@@ -20,7 +22,9 @@ proxy=false
 # Proxy (Not Cloudflare Proxy) - uncomment and provide details if using a proxy
 #export https_proxy=http://<proxyuser>:<proxypassword>@<proxyip>:<proxyport>
 
-# ------------------------------------------------------------------------------
+
+# ------------------- DANGER ZONE BELOW HERE --------------------------
+# ONLY EDIT BELOW HERE IF YOU UNDERSTAND WHAT YOU ARE DOING
 
 function printHelp {
   echo "Usage: script --domain <sub.domain.com> [OPTIONAL]"
