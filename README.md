@@ -113,4 +113,12 @@ script --domain sub.domain.com --target 127.0.0.1
 
 # Use Target IP instead of IP of the host machine AND use Cloudflare Proxy
 script --domain sub.domain.com --target 127.0.0.1 --proxy
-``` 
+```
+Flags can also be abbreviated like this
+```bash
+script -d sub.domain.com
+script -d sub.domain.com -p
+script -d sub.domain.com -t 127.0.0.1
+script -d sub.domain.com -t 127.0.0.1 -p 
+```
+```
