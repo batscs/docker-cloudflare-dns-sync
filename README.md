@@ -38,6 +38,8 @@ If you need help or run into problems feel free to open an issue for this reposi
 Deploy docker container
 To use the installation script, simply run this command in your terminal of choice with root priveleges. The script will automatically build the image and deploy the container.
 
+If you, understandably, don't trust running some random scripts from the internet with sudo permissions you can also download the docker-compose.yml from this repository and up it as detached.
+
 Root priveleges are required to run the installation script. If you can not execute the command from the next step run this:
 ```bash
 sudo -i
