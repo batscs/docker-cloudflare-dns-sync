@@ -49,6 +49,11 @@ Now you can start the docker container with this docker compose command. The "-d
 docker compose up -d
 ```
 
+Configure your Cloudflare Credentials the the top of the script to allow access for changing the DNS Records.
+```bash
+docker exec -it cloudflare-dns-sync nano /app/cloudflare-dns-sync.sh
+```
+
 Create a file named `app.cron` inside the newly created `data` Directory. Your app.cron File will be storing all your cronjobs. You can configure them as [as explained here](#configuration). This file is only being loaded from the container on startup, so you need to restart it with the following command:
 ```bash
 docker compose restart
