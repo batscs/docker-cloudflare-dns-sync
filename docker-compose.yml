@@ -1,6 +1,10 @@
+version: "3.7"
+
 services:
   cloudflare-dns-sync:
     build: "https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/Dockerfile"
     image: "batscs/cloudflare-dns-sync"
     container_name: "cloudflare-dns-sync"
     restart: unless-stopped
+    volumes:
+      - "./data:/app/data"
