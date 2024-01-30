@@ -34,7 +34,7 @@ If you need help or run into problems feel free to open an issue for this reposi
 - Docker
 
 
-<a name="compose"/>
+<a name="compose-installation"/>
 
 ## Recommended Installation (with Docker-Compose)
 This is the recommended way to set up this docker container, as it allows for easily backing up and modifying the cronjobs.
