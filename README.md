@@ -7,9 +7,9 @@
 
 ### Table of Contents  
 [Introduction](#introduction)  
-[Installation (with Docker-Compose)](#compose-installation)  
-[Installation (with Docker)](#docker-installation)  
-[Installation (without Docker)](#installation)  
+[Recommended Installation (with Docker-Compose)](#compose-installation)  
+[Alternative Installation (with Docker)](#docker-installation)  
+[Alternative Installation (without Docker)](#installation)  
 [Configuration (Crontab)](#configuration)  
 [Script Usage](#script)  
 
@@ -56,7 +56,7 @@ docker compose restart
 
 <a name="docker-installation"/>
 
-## Installation (with Docker)
+## Alternative Installation (with Docker)
 To use the installation script, simply run this command in your terminal of choice with root priveleges. The script will automatically build the image and deploy the container.
 
 If you, understandably, don't trust running some random scripts from the internet with sudo permissions you can also download the docker-compose.yml from this repository and up it as detached.
@@ -83,7 +83,7 @@ docker exec -it cf-sync nano /opt/bin/cloudflare/cloudflare-dns-sync.sh
 
 <a name="installation"/>  
 
-## Installation (without Docker, not recommended)
+## Alternative Installation (without Docker, not recommended)
 
 It is recommended to use the installation with docker-compose or atleast just with docker. This script is pretty much what is being installed inside the docker container, alongside the required software. If you know what you are doing and why you want this to be on your host machine and not in a container, follow these instructions. Support for this might drop in the future.
   
