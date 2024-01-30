@@ -29,7 +29,7 @@ RUN mkdir -p /app;
 RUN mkdir -p /app/data
 
 # Downloading file into directory
-RUN curl https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/cloudflare-dns-sync.sh > /app/cloudflare-dns-sync.sh
+RUN curl https://raw.githubusercontent.com/batscs/docker-cloudflare-dns-sync/main/cloudflare-dns-sync.sh > /app/cloudflare-dns-sync.sh
 
 # Ensure execution permissions for the script file
 RUN chmod +x /app/cloudflare-dns-sync.sh
