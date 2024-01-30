@@ -78,7 +78,7 @@ docker exec -it cf-sync crontab -e
 
 At last you just need to configure the script to work with your Cloudflare API Gateway. Edit the variables here at the top. Only change the script if you really understand what you are doing.
 ```bash
-docker exec -it cf-sync nano /opt/bin/cloudflare/cloudflare-dns-sync.sh
+docker exec -it cf-sync nano /app/cloudflare-dns-sync.sh
 ```
 
 <a name="installation"/>  
@@ -111,10 +111,10 @@ if you need help configuring the cronjob for the script [click here](#configurat
 
 ## Configuration
 
-Configure your crontab in this format
+Configure your crontab in this format, this is also an example of how your app.cron file shoud look if you are using docker-compose.
 ```
-*/10 * * * * /opt/bin/cloudflare/cloudflare-dns-sync.sh --domain sub1.domain.com
-*/10 * * * * /opt/bin/cloudflare/cloudflare-dns-sync.sh --domain sub2.domain.com
+*/10 * * * * /app/cloudflare-dns-sync.sh --domain sub1.domain.com
+*/10 * * * * /app/cloudflare-dns-sync.sh --domain sub2.domain.com
 ```
 This will update the Cloudflare DNS-Record for sub1 and sub2 every 10 minutes to the ip of the host machine.
 For more about cronjobs [read this](https://ostechnix.com/a-beginners-guide-to-cron-jobs/).
