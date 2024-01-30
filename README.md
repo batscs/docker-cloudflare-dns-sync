@@ -39,6 +39,21 @@ If you need help or run into problems feel free to open an issue for this reposi
 ## Recommended Installation (with Docker-Compose)
 This is the recommended way to set up this docker container, as it allows for easily backing up and modifying the cronjobs.
 
+Choose a directory of your choice to house the docker-compose.yml file. You will need this directory to start, stop or restart the docker container. This will also be the directory of the stored cronjobs.
+```bash
+curl https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/docker-compose.yml -o docker-compose.yml
+```
+
+Now you can start the docker container with this docker compose command. The "-d" flag starts the container in the background and keeps it running.
+```bash
+docker compose up -d
+```
+
+Create a file named `app.cron` inside the newly created `data` Directory. Your app.cron File will be storing all your cronjobs. You can configure them as [as explained here](#configuration). This file is only being loaded from the container on startup, so you need to restart it with the following command:
+```bash
+docker compose restart
+```
+
 <a name="docker-installation"/>
 
 ## Installation (with Docker)
