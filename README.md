@@ -7,6 +7,7 @@
 
 ### Table of Contents  
 [Introduction](#introduction)  
+[Installation (with Docker-Compose)](#compose-installation)  
 [Installation (with Docker)](#docker-installation)  
 [Installation (without Docker)](#installation)  
 [Configuration (Crontab)](#configuration)  
@@ -32,10 +33,15 @@ If you need help or run into problems feel free to open an issue for this reposi
 #### Requirements:
 - Docker
 
+
+<a name="compose"/>
+
+## Recommended Installation (with Docker-Compose)
+This is the recommended way to set up this docker container, as it allows for easily backing up and modifying the cronjobs.
+
 <a name="docker-installation"/>
 
 ## Installation (with Docker)
-Deploy docker container
 To use the installation script, simply run this command in your terminal of choice with root priveleges. The script will automatically build the image and deploy the container.
 
 If you, understandably, don't trust running some random scripts from the internet with sudo permissions you can also download the docker-compose.yml from this repository and up it as detached.
@@ -64,7 +70,7 @@ docker exec -it cf-sync nano /opt/bin/cloudflare/cloudflare-dns-sync.sh
 
 ## Installation (without Docker, not recommended)
 
-It is recommended to use the installation with docker. This script is pretty much what is being installed inside the docker container, alongside the required software. If you know what you are doing and why you want this to be on your host machine and not in a container, follow these instructions. Support for this might drop in the future.
+It is recommended to use the installation with docker-compose or atleast just with docker. This script is pretty much what is being installed inside the docker container, alongside the required software. If you know what you are doing and why you want this to be on your host machine and not in a container, follow these instructions. Support for this might drop in the future.
   
 Enter this into your terminal of choice to automatically deploy this script. Requires root privelege.
 Otherwise manually download the cloudflare-dns-sync.sh file of this repository in a directory of your choice and skip the next two steps.
