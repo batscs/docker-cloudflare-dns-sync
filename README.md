@@ -7,9 +7,7 @@
 
 ### Table of Contents  
 [Introduction](#introduction)  
-[Recommended Installation (with Docker-Compose)](#compose-installation)  
-[Alternative Installation (with Docker)](#docker-installation)  
-[Alternative Installation (without Docker)](#installation)  
+[Installation (with Docker-Compose)](#compose-installation)  
 [Configuration (Crontab)](#configuration)  
 [Script Usage](#script)  
 
@@ -61,59 +59,6 @@ Create a file named `app.cron` inside the newly created `data` Directory. Your a
 ```bash
 docker compose restart
 ```
-
-<a name="docker-installation"/>
-
-## Alternative Installation (with Docker)
-To use the installation script, simply run this command in your terminal of choice with root priveleges. The script will automatically build the image and deploy the container.
-
-If you, understandably, don't trust running some random scripts from the internet with sudo permissions you can also download the docker-compose.yml from this repository and up it as detached.
-
-Root priveleges are required to run the installation script. If you can not execute the command from the next step run this:
-```bash
-sudo -i
-```
-
-This runs the installation script on the Host Machine to build the Docker Image from this Repository and deploy a Docker Container with it.
-```bash
-bash <(curl -s https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/docker.sh)
-```
-
-The docker container (named: cf-sync) has been deployed and should be running. If all went successfully you can now access it and configure your crontab. When using the install script the crontab editor should open by itself, otherwise you can edit the crontab schedule like this:
-```bash
-docker exec -it cf-sync crontab -e
-```
-
-At last you just need to configure the script to work with your Cloudflare API Gateway. Edit the variables here at the top. Only change the script if you really understand what you are doing.
-```bash
-docker exec -it cf-sync nano /app/cloudflare-dns-sync.sh
-```
-
-<a name="installation"/>  
-
-## Alternative Installation (without Docker, not recommended)
-
-It is recommended to use the installation with docker-compose or atleast just with docker. This script is pretty much what is being installed inside the docker container, alongside the required software. If you know what you are doing and why you want this to be on your host machine and not in a container, follow these instructions. Support for this might drop in the future.
-  
-Enter this into your terminal of choice to automatically deploy this script. Requires root privelege.
-Otherwise manually download the cloudflare-dns-sync.sh file of this repository in a directory of your choice and skip the next two steps.
-Only do this if you really know what and why you are doing this.
-
-Root priveleges are required to run the installations script. If you can not execute the command from the next step run this:
-```bash
-sudo -i
-```
-
-Run the installation script in your terminal with the following command.
-```bash
-bash <(curl -s https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/deploy.sh)
-```
-
-Now you need to configure the crontab schedule for the automatic execution of your scripts, you can edit the schedule with this command:
-```bash
-crontab -e
-```
-if you need help configuring the cronjob for the script [click here](#configuration) for examples.
 
 <a name="configuration"/>
 
