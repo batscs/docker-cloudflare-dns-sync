@@ -44,14 +44,17 @@ Choose a directory of your choice to house the docker-compose.yml file. You will
 curl https://raw.githubusercontent.com/batscs/cloudflare-dns-sync/main/docker-compose.yml -o docker-compose.yml
 ```
 
+Configure the environment variables in the `docker-compose.yml` to your cloudflare credentials. The auth_key is the Cloudflare Global API Key.
+```yml
+environment:
+  - cloudflare_email=your@email.com
+  - cloudflare_auth_key=123456789012345678901234567890
+  - cloudflare_zoneid=123456789012345678901234567890
+```
+
 Now you can start the docker container with this docker compose command. The "-d" flag starts the container in the background and keeps it running.
 ```bash
 docker compose up -d
-```
-
-Configure your Cloudflare Credentials the the top of the script to allow access for changing the DNS Records.
-```bash
-docker exec -it cloudflare-dns-sync nano /app/cloudflare-dns-sync.sh
 ```
 
 Create a file named `app.cron` inside the newly created `data` Directory. Your app.cron File will be storing all your cronjobs. You can configure them as [as explained here](#configuration). This file is only being loaded from the container on startup, so you need to restart it with the following command:
