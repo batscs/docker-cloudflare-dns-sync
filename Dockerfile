@@ -4,7 +4,7 @@ FROM ubuntu:22.04
 MAINTAINER dev@bats.li
 
 # Installing requirements
-RUN apt-get update
+RUN apt-get update --fix-missing
 
 # nano for editing the script file for cloudflare api records
 RUN apt-get install -y nano
