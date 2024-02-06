@@ -7,13 +7,13 @@
 # ------------------- MODIFY YOUR USER DEFINED VARIABLES HERE --------------------------
 
 ## Cloudflare authentication details, keep these private!
-cloudflare_auth_email=your@email.com
+cloudflare_email=$cloudflare_email
 # Global Auth Key
-cloudflare_auth_key=1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZX
+cloudflare_auth_key=$cloudflare_auth_key
 
 # Cloudflare zone is the zone which holds the record
 # Zone ID can be found in the Overview Tab
-cloudflare_zoneid=1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZX
+cloudflare_zoneid=$cloudflare_zoneid
 
 # Enable or Disable Cloudflare Proxified IP for the DNS Record
 # In most cases you want this on false, because Cloudflare doesnt proxy all ports
