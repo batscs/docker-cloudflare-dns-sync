@@ -5,6 +5,10 @@ services:
     build: "https://raw.githubusercontent.com/batscs/docker-cloudflare-dns-sync/main/Dockerfile"
     image: "batscs/cloudflare-dns-sync"
     container_name: "cloudflare-dns-sync"
+    environment:
+      - cloudflare_email=your@email.com
+      - cloudflare_auth_key=123456789012345678901234567890
+      - cloudflare_zoneid=123456789012345678901234567890
     restart: unless-stopped
     volumes:
       - "./data:/app/data"
