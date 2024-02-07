@@ -5,10 +5,11 @@
 # Modified after: https://gist.github.com/Tras2/cba88201b17d765ec065ccbedfb16d9a
 
 # Sourcing environment variables from docker-compose.yml
+# Alternative would be hardcoding the values to the variables here
 source /app/.env
 
 ## Cloudflare authentication details, keep these private!
-cloudflare_email=$cloudflare_email
+cloudflare_auth_email=$cloudflare_email
 # Global Auth Key
 cloudflare_auth_key=$cloudflare_auth_key
 
