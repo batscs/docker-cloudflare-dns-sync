@@ -52,12 +52,12 @@ environment:
 
 Now you can start the docker container with this docker compose command. The "-d" flag starts the container in the background and keeps it running.
 ```bash
-docker compose up -d
+docker-compose up -d
 ```
 
 Create a file named `app.cron` inside the newly created `data` Directory. Your app.cron File will be storing all your cronjobs. You can configure them as [as explained here](#configuration). This file is only being loaded from the container on startup, so you need to restart it with the following command:
 ```bash
-docker compose restart
+docker-compose restart
 ```
 
 <a name="configuration"/>
