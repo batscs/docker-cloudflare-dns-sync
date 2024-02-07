@@ -4,7 +4,8 @@
 # Needs the DNS record pre-creating on Cloudflare
 # Modified after: https://gist.github.com/Tras2/cba88201b17d765ec065ccbedfb16d9a
 
-# ------------------- MODIFY YOUR USER DEFINED VARIABLES HERE --------------------------
+# Sourcing environment variables from docker-compose.yml
+source /app/.env
 
 ## Cloudflare authentication details, keep these private!
 cloudflare_email=$cloudflare_email
