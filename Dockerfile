@@ -31,8 +31,11 @@ RUN mkdir -p /app/data
 # Downloading file into directory
 RUN curl https://raw.githubusercontent.com/batscs/docker-cloudflare-dns-sync/main/cloudflare-dns-sync.sh > /app/cloudflare-dns-sync.sh
 
+RUN curl https://raw.githubusercontent.com/batscs/docker-cloudflare-dns-sync/main/app/init.sh -o /app/init.sh
+
 # Ensure execution permissions for the script file
 RUN chmod +x /app/cloudflare-dns-sync.sh
+RUN chmod +x /app/init.sh
 
 # Give Example Crontab File
 # RUN echo "# Example: \n# */10 * * * * /app/cloudflare-dns-sync.sh --domain sub1.domain.com" > /app/data/app.cron
@@ -41,4 +44,4 @@ RUN chmod +x /app/cloudflare-dns-sync.sh
 
 # Run cron in foreground on each container start
 # If a specific file is set for the scheduled cronjobs, use it instead
-CMD crontab /app/data/app.cron; cron -f
+CMD /app/init.sh
