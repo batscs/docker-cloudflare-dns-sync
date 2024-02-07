@@ -29,7 +29,7 @@ RUN mkdir -p /app;
 RUN mkdir -p /app/data
 
 # Downloading file into directory
-RUN curl https://raw.githubusercontent.com/batscs/docker-cloudflare-dns-sync/main/cloudflare-dns-sync.sh > /app/cloudflare-dns-sync.sh
+RUN curl https://raw.githubusercontent.com/batscs/docker-cloudflare-dns-sync/main/app/cloudflare-dns-sync.sh -o /app/cloudflare-dns-sync.sh
 
 RUN curl https://raw.githubusercontent.com/batscs/docker-cloudflare-dns-sync/main/app/init.sh -o /app/init.sh
 
